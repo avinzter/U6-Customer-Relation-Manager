@@ -1,7 +1,11 @@
 RailsChallengeCrm::Application.routes.draw do
+  #get "finder/action"
+  #get "finder/view"
+
   resources :customers
 
-  root :to => "customers#index", :via => :get
+  root :to => "finder#action", :via => :get
+  match 'finder/:id' => 'finder#view', :as => :finder_customer, :via => :get
 
 
   # The priority is based upon order of creation:
