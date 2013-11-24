@@ -1,6 +1,8 @@
 RailsChallengeCrm::Application.routes.draw do
   resources :customers
 
+  root :to => "customers#index", :via => :get
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,12 @@
+<section>
+	<h3><%= link_to customer.full_name, customer%></h3>
+
+	<% if customer.image_filename %>
+		<p><%= link_to image_tag(customer.image_filename, :width => '150', :height => '250')%></p>	
+	<% end %>
+
+	<p><strong>Phone: </strong> <%= customer.phone %></p>
+	<p><strong>Email: </strong> <%= customer.email %></p>
+	<p><strong>Notes: </strong> <%= customer.notes %></p>
+
+</section>
