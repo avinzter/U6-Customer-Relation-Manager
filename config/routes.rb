@@ -7,6 +7,8 @@ RailsChallengeCrm::Application.routes.draw do
   root :to => "finder#action", :via => :get
   match 'finder/:id' => 'finder#view', :as => :finder_customer, :via => :get
 
+  match 'finder/missing_email' => 'finder#missing_email', :as => :finder_customer, :via => :get
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

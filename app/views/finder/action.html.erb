@@ -1,3 +1,6 @@
-<h1>Finder#action</h1>
-<p>Find me in app/views/finder/action.html.erb</p>
+<h1>All Customers</h1>
 
+
+<% @customers.each do |customer| %>
+	<%= render customer %>
+<% end %>

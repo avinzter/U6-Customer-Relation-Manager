@@ -1,12 +1,17 @@
 <section>
-	<!--//<h3><%= link_to customer.full_name, customer%></h3> -->
+	<h2><%= link_to customer.full_name, finder_customer_path(customer)%></h2>
 
-	<% if customer.image_filename %>
-		<p><%= link_to image_tag(customer.image_filename, :width => '150', :height => '250')%></p>	
+	<% if customer.image %>
+		<p><%= image_tag customer.image, :width => '100', :height => '130'%></p>	
 	<% end %>
 
-	<p><strong>Phone: </strong> <%= customer.phone %></p>
-	<p><strong>Email: </strong> <%= customer.email %></p>
-	<p><strong>Notes: </strong> <%= customer.notes %></p>
-
+	<div class="phoneNo">
+		<p><strong>Phone: </strong><%= customer.phone_number %></p>
+	</div>
+	<div class="email">
+		<p><strong>Email: </strong><%= customer.email_address %></p>
+	</div>
+	<div class="notes">
+		<p><strong>Notes: </strong><%= customer.notes %></p>
+	</div>
 </section>

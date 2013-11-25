@@ -7,4 +7,8 @@ class FinderController < ApplicationController
   def view
   	@customer = Customer.find(params[:id])
   end #load: app/views/finder/view.html.erb
+
+  def missing_email
+  	@customer = Customer.where("email_address IS NULL")
+  end
 end
