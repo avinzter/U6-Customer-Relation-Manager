@@ -6,6 +6,7 @@ class CreateCustomers < ActiveRecord::Migration
       t.string :email_address
       t.string :image
       t.string :notes
+      t.integer :province_id
 
       t.timestamps
     end
