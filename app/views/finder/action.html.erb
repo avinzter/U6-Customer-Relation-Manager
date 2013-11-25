@@ -1,5 +1,6 @@
 <h1>All Customers</h1>
 
+<p><%= link_to 'New Customer ', finder_customer_path %> - <%= link_to 'Missing Emails ', finder_customer_path %></p>
 
 <% @customers.each do |customer| %>
 	<%= render customer %>
