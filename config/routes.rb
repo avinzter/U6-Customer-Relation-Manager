@@ -1,4 +1,7 @@
 RailsChallengeCrm::Application.routes.draw do
+  resources :provinces
+
+
   #get "finder/action"
   #get "finder/view"
 
